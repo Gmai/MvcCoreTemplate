@@ -1,0 +1,26 @@
+﻿@model WebApi.Models.ViewModels.PatientVM
+@using CrossCutting.Models
+
+@{
+	ViewData["Title"] = "Index";
+	var fields = Json.Serialize(Field.Extract(Model));
+}
+
+<h2>Index</h2>
+
+<h4>PatientVM</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+	<script>
+		var patient = JSON.parse('@(fields)');
+	</script>
+}

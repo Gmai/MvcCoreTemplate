@@ -1,0 +1,4 @@
+﻿in the GYMDAL folder
+
+dotnet ef --startup-project ../WebApi/ migrations add Initial
+dotnet ef --startup-project ../WebApi/ database update
